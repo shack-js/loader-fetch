@@ -1,0 +1,25 @@
+{
+  "name": "@shack-js/loader-fetch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shack-js/loader-fetch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shack-js/loader-fetch/issues"
+  },
+  "homepage": "https://github.com/shack-js/loader-fetch#readme",
+  "dependencies": {
+    "acorn-loose": "^8.1.0",
+    "loader-utils": "^2.0.0",
+    "replaceall": "^0.1.6"
+  }
+}
