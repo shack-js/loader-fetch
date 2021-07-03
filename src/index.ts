@@ -10,7 +10,7 @@ export default function (this: any, source: string) {
   const {
     apiPrefix = '/apis',
     backendFolder = 'apis',
-    postPath = '@shack-js/loader-fetch/src/fetch.js',
+    postPath = '@shack-js/loader-fetch/dist/fetch.js',
     sourceType = 'module'
   } = getOptions(this)
   const { resourcePath, rootContext } = this
