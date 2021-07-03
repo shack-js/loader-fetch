@@ -1,5 +1,5 @@
 let _headers = {};
-export default async (url, params) => {
+export default async (url:string, params:any) => {
     const response = await fetch(url, {
         method: 'POST',
         mode: 'cors',

@@ -6,13 +6,13 @@ const ExportNamedDeclaration = 'ExportNamedDeclaration'
   , FunctionDeclaration = 'FunctionDeclaration'
   , VariableDeclaration = 'VariableDeclaration'
 
-module.exports = function getPathes(source, sourceType = 'module') {
+export default function getPathes(source:string, sourceType = 'module') {
   // console.log(JSON.stringify(source))
   let node = acorn.parse(source, {
     ecmaVersion: 2020,
     sourceType
   })
-  let paths = []
+  let paths:string[] = []
   recursiveFindExport(node)
   // console.log(`paths`,paths)
   return paths
