@@ -21,7 +21,7 @@ export default function (this: any, source: string) {
       let url = getUrl(apiPrefix, resourcePath,
         join(rootContext, replaceAll('/', sep, backendFolder)), x)
       let exportLeft = x ? `export const ${x} =` : `export default`
-      let code = `${exportLeft} async (...params) => await $SHACKPOST.default(${JSON.stringify(url)},params)`
+      let code = `${exportLeft} async (...params) => await $SHACKPOST(${JSON.stringify(url)},params)`
       codes.push(code)
     })
   cache[resourcePath] = codes.join('\n')
