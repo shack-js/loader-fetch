@@ -23,4 +23,4 @@ module:{
     }
 ```
 
-try on codesandbox: https://codesandbox.io/s/exciting-gwen-dek39?file=/web/index.js
+try on codesandbox: https://codesandbox.io/s/shack-js-loader-fetch-example-dek39
