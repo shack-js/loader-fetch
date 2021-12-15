@@ -22,3 +22,5 @@ module:{
       }
     }
 ```
+
+try on codesandbox: https://codesandbox.io/s/exciting-gwen-dek39?file=/web/index.js

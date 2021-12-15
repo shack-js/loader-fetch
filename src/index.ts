@@ -15,17 +15,16 @@ export default function (this: any, source: string) {
   } = getOptions(this)
   const { resourcePath, rootContext } = this
   if (cache[resourcePath]) return cache[resourcePath]
-  let codes = [`import $SHACKPOST from ${JSON.stringify(postPath)}`]
+  let codes = [`import { request } from ${JSON.stringify(postPath)}`]
   getPathes(source, sourceType)
     .forEach(x => {
       let url = getUrl(apiPrefix, resourcePath,
         join(rootContext, replaceAll('/', sep, backendFolder)), x)
       let exportLeft = x ? `export const ${x} =` : `export default`
-      let code = `${exportLeft} async (...params) => await $SHACKPOST(${JSON.stringify(url)},params)`
+      let code = `${exportLeft} async (...params) => await request(${JSON.stringify(url)}, params)`
       codes.push(code)
     })
   cache[resourcePath] = codes.join('\n')
-  // console.log(JSON.stringify(cache[resourcePath]))
   return cache[resourcePath]
 }
 
